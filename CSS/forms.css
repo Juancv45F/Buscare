@@ -1,0 +1,55 @@
+
+/* hacer que se haga se ordenen por columna */
+.form-selector{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Darle estilos a los botones */
+.form-selector button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD700;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* Darle animación a los botones */
+.form-selector button:hover{
+    background-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.525);
+    transform: scale(1.1);
+}
+
+.form-selector.hidden {
+    display: none;
+}
+
+.form-container.active {
+    display: contents;
+}
+.form-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1{
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    margin-top: 10px;
+}
+.contraseña{
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

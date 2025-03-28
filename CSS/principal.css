@@ -1,0 +1,262 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav img {
+    height: 50px;
+}
+
+.menu-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.problema-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-btn {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    color: #45a049;
+}
+
+.delete-btn {
+    color: #f44336;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: #d32f2f;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#notification-display {
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+#notification-display h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#notification-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#notification-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#notification-list li:last-child {
+    border-bottom: none;
+}
+
+#notification-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#bell-btn {
+    position: relative;
+}
+
+#notification-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: none; /* Initially hidden */
+}
+
+/* Contenedor principal de mensajes */
+.messages-container {
+    margin: 15px 0;
+    max-width: 100%;
+}
+
+/* Estilo para mensajes de éxito */
+.message {
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Estilo para mensajes de error */
+.error {
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    background-color: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Animación para aparecer suavemente */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Iconos para los mensajes (usando Font Awesome) */
+.message::before {
+    content: "\f058"; /* Icono de check */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.error::before {
+    content: "\f06a"; /* Icono de exclamación */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+/* Botón para cerrar (opcional) */
+.message .close-btn, 
+.error .close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.message .close-btn:hover,
+.error .close-btn:hover {
+    opacity: 1;
+}
+
+/* Estilo específico para mensajes de contraseña */
+.alert-info {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border-left: 4px solid #1565c0;
+}
+
+.alert-info i.fa-key {
+    color: #1565c0;
+}
+
+/* Estilo para texto fuerte en mensajes */
+.message strong {
+    font-weight: 600;
+    color: inherit;
+    background-color: rgba(255,255,255,0.3);
+    padding: 2px 5px;
+    border-radius: 3px;
+    word-break: break-all;
+}

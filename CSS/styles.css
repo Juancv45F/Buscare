@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6C4DC4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.input-field {
+    margin: 20px 0;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #FFD700;
+    border: none;
+    padding: 15px;
+    width: 85%;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.menu-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.menu-btn {
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilos adicionales sin alterar los existentes */
+
+/* Estilo para la tabla */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #6C4DC4;
+    color: white;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Separar el formulario de la tabla */
+.registro-problemas {
+    margin-top: 40px !important; /* Aumenta la distancia entre la tabla y el formulario */
+    padding: 20px;
+    background-color: #6C4DC4;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajuste del input y botón */
+.input-field {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.btn {
+    background-color: #FFD700;
+    color: rgb(135, 135, 135);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+}
+.menu-btn i {
+    color: black; /* Cambia el color de los iconos a negro */
+}
+
+.menu-btn:hover i {
+    color: #ffcc00; /* Cambia a cualquier otro color que prefieras al pasar el mouse */
+}
+
+
+/*Páginas Amaya*/
+
+.container1 {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+}
+
+.registro{
+    margin: 10px !important;
+    margin-top: 5px;
+    padding: 10px;
+    padding-top: 5px;
+    justify-content:center;
+    background-color: #6C4DC4;
+    color: white;
+    border-radius: 10px;
+    text-align:center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.input-field1 {
+    width: 70%;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.edit-btn {
+    background-color: #FFD700;
+    color: rgb(135, 135, 135);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn i {
+    color: black; /* Cambia el color de los iconos a negro */
+}
+.edit-btn:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+}
+.edit-btn:hover i {
+    color: #FFD700; /* Cambia a cualquier otro color que prefieras al pasar el mouse */
+}
